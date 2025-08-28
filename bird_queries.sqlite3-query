@@ -5,4 +5,15 @@ ORDER BY `status` ASC;
 
 SELECT * FROM Birds2;
 
-SELECT common_name, scientific_name FROM Birds2
+--Common name, scientific name--
+SELECT common_name, scientific_name FROM Birds2;
+
+--ID, common name, status--
+SELECT bird_id, common_name, Status.status
+FROM Birds2
+JOIN Status ON Status.statusID=Birds2.status;
+
+--Everything for a single bird--
+SELECT * FROM Birds2
+JOIN Status ON Status.statusID=Birds2.status
+WHERE Birds2.bird_id = 2;
