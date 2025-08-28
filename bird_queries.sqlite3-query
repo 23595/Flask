@@ -1,0 +1,8 @@
+-- database: ./nz_birds.db
+
+SELECT * FROM Birds2
+ORDER BY `status` ASC;
+
+SELECT * FROM Birds2;
+
+SELECT common_name, scientific_name FROM Birds2
