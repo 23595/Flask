@@ -1,4 +1,4 @@
-from flask import Flask, g
+from flask import Flask, g, render_template
 import sqlite3
 
 DATABASE = 'nz_birds.db'
@@ -32,7 +32,7 @@ def home():
                 FROM Birds2
                 JOIN Status ON Status.statusID=Birds2.status;'''
     results = query_db(sql)
-    return str(results)
+    return render_template("layout.html")
 
 @app.route('/bird/<int:id>')
 def bird(id):

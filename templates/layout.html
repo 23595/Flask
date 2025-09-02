@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Testing</title>
 </head>
 <body>
+    <!-- Shared Sidebar -->
+    <section class="sidebar">
+        <div class="box"><h1>Hello</h1></div>
+        <div><a href="https://www.w3.org/"><h3 class="box">link</h3></a></div>
+        <a href="https://www.w3.org/"><h3 class="box">link</h3></a>
+    </section>
+    <!-- Other stuff -->
+    <h1 class="temp">hello</h1>
     {% block body %}
     {% endblock %}
 </body>
