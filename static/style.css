@@ -3,20 +3,31 @@ body{
     margin: 0px;
 }
 .sidebar{
-    width: 25%;
+    width: 15%;
     background-color: grey;
     display: inline-block;
+    height: 100%;
 }
 .box{
     width: 80%;
-    margin: auto;
+    margin: 15px auto;
     background-color: antiquewhite;
     border-radius: 10px;
+    text-align: center;
+    height: 40px;
+    padding-top: 20px;
+    color: black;
+}
+a .box:hover{
+    background-color: bisque;
+}
+a{
+    text-decoration: none;
+}
+.topbox{
+    height: 75px;
+    margin-top: 150px;
 }
 .temp{
     display: inline-block;
-}
-h1{
-    width: 50%;
-    margin: auto;
 }
