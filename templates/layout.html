@@ -8,14 +8,18 @@
 </head>
 <body>
     <!-- Shared Sidebar -->
-    <section class="sidebar">
-        <div class="box topbox"><h1>Hello</h1></div>
-        <a href="https://www.w3.org/"><div class="box">xx</div></a>
-        <a href="https://www.w3.org/"><div class="box">xx</div></a>
-    </section>
+    <aside class="sidebar">
+        <div class="box topbox"><h1>Useful Links</h1></div>
+        <a href="https://www.wordreference.com/" target="_blank"><div class="box">WordReference</div></a>
+        <a href="https://quizlet.com/class/28092562/materials" target="_blank"><div class="box">Quizlet</div></a>
+        <a href="https://www.pearsonactivelearn.com/app/library/series/view/714976#/exercises" target="_blank"><div class="box">Activelearn</div></a>
+        <a href="https://spanish411.net/PractiquemosLogin.asp" target="_blank"><div class="box">Spanish 411</div></a>
+        <a href="https://www.linguascope.com/"><div class="box">Linguascope</div></a>
+        <a href="https://docs.google.com/document/d/14DdVjXwLZaOLZ43lQNi-xsW8XdFYTj465JwST2HjMUM/edit?tab=t.0"><div class="box">Vocabulary Homework</div></a>
+    </aside>
     <!-- Other stuff -->
-    <h1 class="temp">hello</h1>
-    {% block body %}
-    {% endblock %}
+    <section class="other">
+    {% block content %}{% endblock %}
+    </section>
 </body>
 </html>

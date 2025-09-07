@@ -32,7 +32,7 @@ def home():
                 FROM Birds2
                 JOIN Status ON Status.statusID=Birds2.status;'''
     results = query_db(sql)
-    return render_template("layout.html")
+    return render_template("index.html")
 
 @app.route('/bird/<int:id>')
 def bird(id):

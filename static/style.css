@@ -1,17 +1,22 @@
-body{
+body, html{
     width: 100%;
     margin: 0px;
+    height: 100%;
 }
 .sidebar{
     width: 15%;
-    background-color: grey;
-    display: inline-block;
+    background-color: #2C2C2C;
+    float: left;
     height: 100%;
+}
+.other{
+    display: inline-block;
+    width: 85%;
 }
 .box{
     width: 80%;
     margin: 15px auto;
-    background-color: antiquewhite;
+    background-color: #F6AA1C;
     border-radius: 10px;
     text-align: center;
     height: 40px;
@@ -28,6 +33,38 @@ a{
     height: 75px;
     margin-top: 150px;
 }
-.temp{
-    display: inline-block;
+.hero-section{
+    background-color: #941B0C;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+}
+.hero-text{
+    text-align: center;
+    color: #F6AA1C;
+    margin-top: 0px;
+    padding-top: 225px;
+    font-size: 50px;
+}
+
+/*Grid layout with linked images*/
+.two-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    gap: 10%;
+    margin: auto;
+    margin-top: 50px;
+}
+.card{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+}
+.card1{
+    background-image: url('https://tastesbetterfromscratch.com/wp-content/uploads/2020/04/Paella-7.jpg') 50% 50% no-repeat;
+}
+.caption{
+    color: #2C2C2C;
+    background-color: #941B0C;
 }
