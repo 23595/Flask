@@ -1,7 +1,7 @@
 from flask import Flask, g, render_template
 import sqlite3
 
-DATABASE = 'nz_birds.db'
+DATABASE = 'spish.db'
 
 #initialise app
 app = Flask(__name__)
@@ -24,15 +24,28 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-
 @app.route('/')
 def home():
     #home page - IDs, common names, and status
-    sql = '''   SELECT bird_id, common_name, Status.status
-                FROM Birds2
-                JOIN Status ON Status.statusID=Birds2.status;'''
-    results = query_db(sql)
+    #sql = '''   SELECT bird_id, common_name, Status.status
+    #            FROM Birds2
+    #            JOIN Status ON Status.statusID=Birds2.status;'''
+    #results = query_db(sql)
     return render_template("index.html")
+
+#@app here maybe?
+@app.route('/foods')
+def foods():
+    #spanishwords
+    #sql = '''   SELECT bird_id, common_name, Status.status
+    #            FROM Birds2
+    #            JOIN Status ON Status.statusID=Birds2.status;'''
+    #results = query_db(sql)
+    return render_template("food.html")
+@app.route('/countries')
+def countries():
+    return render_template("countries.html")
+
 
 @app.route('/bird/<int:id>')
 def bird(id):
@@ -40,8 +53,8 @@ def bird(id):
     sql = '''   SELECT * FROM Birds2
                 JOIN Status ON Status.statusID=Birds2.status
                 WHERE Birds2.bird_id = ?;'''
-    result = query_db(sql,(id,))
-    return str(result)
+    #result = query_db(sql, (id,))
+    #return str(result)
 
 if __name__ == "__main__":
     app.run(debug=True)

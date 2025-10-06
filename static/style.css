@@ -3,11 +3,15 @@ body, html{
     margin: 0px;
     height: 100%;
 }
+html{
+  background-color: #D2D1CC;
+}
+
 .sidebar{
     width: 15%;
     background-color: #2C2C2C;
     float: left;
-    height: 100%;
+    height: 150%;
 }
 .other{
     display: inline-block;
@@ -55,16 +59,150 @@ a{
     gap: 10%;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 150px;
 }
-.card{
+.gridsquare{
+  border: 2px solid black;
+}
+.gridimg1{
     width: 100%;
-    height: 250px;
-    text-align: center;
+    height: 300px;
+    object-fit: cover;
+    background-image: url("./images/paella.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.card1{
-    background-image: url('https://tastesbetterfromscratch.com/wp-content/uploads/2020/04/Paella-7.jpg') 50% 50% no-repeat;
+.gridimg2{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background-image: url("./images/paella.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gridimg3{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background-image: url("./images/writing.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.grid-span-2{
+  grid-column: span 2;
 }
 .caption{
-    color: #2C2C2C;
+    color: #F6AA1C;
     background-color: #941B0C;
+    margin: 0px;
+    text-align: center;
+    border-top: 2px solid black;
+}
+
+/*toggle switch*/
+.switchbox{
+  width: 75px;
+  height: 50px;
+  margin-left: 85%;
+  margin-top: -25px;
+  background-color: #BC3908;
+  border: 1px solid black;
+  transform: translateY(70px) scale(1.5);
+}
+
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F6AA1C;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #2C2C2C;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #621708;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #621708;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/*Button to go back*/
+button{
+  display: inline-block;
+  width: 75px;
+  height: 50px;
+  margin-left: 5%;
+  background-color: #BC3908;
+  border: 1px solid black;
+  transform: translateY(20px) scale(1.5);
+}
+/*Other stuff*/
+.other{
+  /*margin-top: -79px;*/
+  transform: translateY(-79px);
+  position: relative;
+}
+.divider{
+  width: 100%;
+  background-color: #2C2C2C;
+  height: 45px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+  color: #BC3908;
+  font-size: 30px;
+}
+
+/*foods page*/
+.twofour_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  gap: 10%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 150px;
 }

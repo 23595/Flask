@@ -1,16 +1,29 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-<div class="hero-section"><h1 class="hero-text">Spanish</h1></div>
+<div class="switchbox">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <button onclick="history.back()" style="visibility: hidden;">Back</button>
+<div class="divider">
+</div>
 
 <section class="two-column">
-    <a href=""><div class="card card1">
-        <h1 class="caption">Caption</h1>
-    </div></a>
-    <a href="https://www.wordreference.com/"><div class="card card2">
-        <h1 class="caption">Caption2</h1>
-    </div></a>
-</section>
+    <a href="http://127.0.0.1:5000/foods" class="gridsquare">
+        <div class="gridimg1"></div>
+        <h1 class="caption">Spanish Food</h1>
+    </a>
+    <a href="http://127.0.0.1:5000/countries" class="gridsquare">
+        <div class="gridimg2"></div>
+        <h1 class="caption">Spanish Speaking Countries</h1>
+    </a>
+    <a href="https://quizlet.com/nz/516640194/ncea-level-1-spanish-vocab-flash-cards/?funnelUUID=1a906f91-d335-40dd-b7fc-4a2e60f904f8" target="_blank" class="grid-span-2 gridsquare">
+        <div class="gridimg3"></div>
+        <h1 class="caption">Level One Vocab</h1>
+    </a>
 
+</section>
 {% endblock %}
