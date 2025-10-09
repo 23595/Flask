@@ -200,9 +200,52 @@ button{
 .twofour_grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 70%;
-  gap: 10%;
+  width: 60%;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 150px;
+}
+.paragraph{
+  text-align: center;
+  vertical-align: middle;
+}
+.foodimg1{
+  width: 85%;
+  height: 250px;
+  object-fit: cover;
+  background-image: url("./images/paella.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+.foodimg2{
+  width: 85%;
+  height: 250px;
+  object-fit: cover;
+  background-image: url("./images/tortilla_espanola.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+.foodimg3{
+  width: 85%;
+  height: 250px;
+  object-fit: cover;
+  background-image: url("./images/gambas_el_ajillo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+.foodimg4{
+  width: 85%;
+  height: 250px;
+  object-fit: cover;
+  background-image: url("./images/patatas_bravas.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
 }
