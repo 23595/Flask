@@ -1,9 +1,8 @@
 from flask import Flask, g, render_template
 import sqlite3
+import random
 
 DATABASE = 'spish.db'
-
-
 
 
 #initialise app
@@ -27,32 +26,22 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
+#Routes for different pages:
 @app.route('/')
 def home():
-    #home page - IDs, common names, and status
-    #sql = '''   SELECT bird_id, common_name, Status.status
-    #            FROM Birds2
-    #            JOIN Status ON Status.statusID=Birds2.status;'''
-    #results = query_db(sql)
     return render_template("index.html")
-
-#@app here maybe?
 @app.route('/foods')
 def foods():
-    #spanishwords
-    #sql = '''   SELECT bird_id, common_name, Status.status
-    #            FROM Birds2
-    #            JOIN Status ON Status.statusID=Birds2.status;'''
-    #results = query_db(sql)
     return render_template("food.html")
 @app.route('/countries')
 def countries():
     return render_template("countries.html")
 
-
-@app.route('/bird/<int:id>')
-def bird(id):
-    #Give one bird's info based on ID
+#
+@app.route('/word/<int:id>')
+def word(id):
+    #Ask for a defenition of a random word
+    id = random.randint(0,849)
     sql = '''   SELECT * FROM Birds2
                 JOIN Status ON Status.statusID=Birds2.status
                 WHERE Birds2.bird_id = ?;'''
